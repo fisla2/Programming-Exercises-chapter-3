@@ -1,0 +1,26 @@
+import java.util.Scanner; // Import Scanner class for user input
+
+public class BookstoreCredit {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in); // Create Scanner object
+
+        // Prompt user for student's name
+        System.out.print("Enter student's name: ");
+        String name = scanner.nextLine();
+
+        // Prompt user for GPA
+        System.out.print("Enter student's grade point average (GPA): ");
+        double gpa = scanner.nextDouble();
+
+        // Call method to display bookstore credit information
+        displayCreditInfo(name, gpa);
+
+        scanner.close(); // Close the scanner
+    }
+
+    // Method to calculate and display bookstore credit
+    public static void displayCreditInfo(String studentName, double gpa) {
+        double credit = gpa * 10; // Calculate bookstore credit
+        System.out.printf("Student: %s%nGPA: %.2f%nBookstore Credit: $%.2f%n", studentName, gpa, credit);
+    }
+}
